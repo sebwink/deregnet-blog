@@ -24,7 +24,11 @@ jobs:
     name: Upload to @blog.sebwink.net
     steps:
       - uses: actions/checkout@v2 
+      - run: yarn 
+      - run: yarn zip
+      - run: mv dist/editorial.zip dist/custom-editorial.zip
       - uses: TryGhost/action-deploy-theme@v1.3.1
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+          file: ./dist/custom-editorial.zip
