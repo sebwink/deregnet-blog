@@ -18,6 +18,11 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: yarn
       - run: yarn test:ci
+  push_to_gitlab:
+    runs-on: ubuntu-18.04 
+    name: Gitlab sync 
+    steps:
+      - run: curl https://gitlab.com/api/v4/projects/20484891/mirror/pull?private_token=${{ secrets.GITLAB_TOKEN }}
   upload:
     needs: test
     runs-on: ubuntu-18.04
