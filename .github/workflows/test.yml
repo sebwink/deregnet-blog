@@ -1,22 +1,30 @@
-name: Test
+name: Test and Upload
 on:
   pull_request:
   push:
     branches:
       - master
-      - 'renovate/*'
 jobs:
-  build:
+  test:
     runs-on: ubuntu-18.04
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/'))
     strategy:
       matrix:
         node: [ '10' ]
     name: Node ${{ matrix.node }}
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
       - run: yarn
       - run: yarn test:ci
+  upload:
+    needs: test
+    runs-on: ubuntu-18.04
+    name: Upload to @blog.sebwink.net
+    steps:
+      - uses: actions/checkout@v2 
+      - uses: TryGhost/action-deploy-theme@v1.3.1
+        with:
+          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
