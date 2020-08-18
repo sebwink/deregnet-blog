@@ -17,19 +17,15 @@
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
 
 
-    <!-- BEGIN Prism.js -->
-    <link 
-	    rel="stylesheet" 
-		href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-tomorrow.min.css" 
-		integrity="sha512-vswe+cgvic/XBoF1OcM/TeJ2FW0OofqAVdCZiEYkd6dwGXthvkSFWOoGGJgS2CW70VK5dQM5Oh+7ne47s74VTg==" 
+    <!-- BEGIN highlight.js -->
+
+    <link
+		rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/zenburn.min.css" 
+		integrity="sha512-An0YCxH4RK49+wwobIVk7k5TznOStGIAfdljm8mRLKKNC8qubQd9hNMFUkTBSjYzpo3ICY9kNV53TVsawlZGXw==" 
 		crossorigin="anonymous"
     />
-    <link 
-	    rel="stylesheet" 
-		href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.css" 
-		integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" 
-		crossorigin="anonymous" 
-    />
+
     <!-- FIX line numbers -->
     <!-- https://github.com/PrismJS/prism/issues/1420#issuecomment-388651433 -->
     <style>
@@ -41,7 +37,7 @@
   		    padding: 0;
 	    }
     </style>
-    <!-- END Prism.js -->
+    <!-- END highlight.js -->
 
 	<!-- BEGIN KaTeX -->
     <link
@@ -111,23 +107,53 @@
     <script src="{{asset "main/js/util.js"}}"></script>
     <script src="{{asset "main/js/main.js"}}"></script>
 
-    <!-- BEGIN Prism.js -->
+    <!-- BEGIN highlight.js -->
+
     <script 
-		src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js" 
-		integrity="sha512-WkVkkoB31AoI9DAk6SEEEyacH9etQXKUov4JRRuM1Y681VsTq7jYgrRw06cbP6Io7kPsKx+tLFpH/HXZSZ2YEQ==" 
-		crossorigin="anonymous">
-	</script>
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js" 
+		integrity="sha512-tHQeqtcNWlZtEh8As/4MmZ5qpy0wj04svWFK7MIzLmUVIzaHXS8eod9OmHxyBL1UET5Rchvw7Ih4ZDv5JojZww==" 
+		crossorigin="anonymous"
+    ></script>
+
+    <!-- Python -->
     <script 
-		src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/autoloader/prism-autoloader.min.js" 
-		integrity="sha512-ROhjG07IRaPZsryG77+MVyx3ZT5q3sGEGENoGItwc9xgvx+dl+s3D8Ob1zPdbl/iKklMKp7uFemLJFDRw0bvig==" 
-		crossorigin="anonymous">
-	</script>
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/languages/python.min.js" 
+		integrity="sha512-WcBVMlcnidIwZahxxTMnFDuZ/KBAaaWKLA7fw4Blz+H1eB17NgLHV2muHZCwVWK5tYO6AN59GQDosn1muZFJng==" 
+		crossorigin="anonymous"
+    ></script>
+	<!-- C++ -->
     <script 
-		src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.js" 
-		integrity="sha512-1oLZvExT5RaW4q2GgvRPf+XzVVGmsKirfZBRN7aifdOpvZ1L9idEncfMFlfHiQNGBA+Sev+alscSAT/xQ0rwXA==" 
-		crossorigin="anonymous">
-	</script>
-    <!-- END Prism.js -->
+		src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/languages/cpp.min.js" 
+		integrity="sha512-FyBNkKd2P3U0uqHR6bkIZUXXxZ0WnVVTSwQS+9LuBuUZ8c8bcXC7eQU2yYSq0kFk65QMt7S9oO6lGH34EqM9Qw==" 
+		crossorigin="anonymous"
+    ></script>
+	<!-- Rust -->
+
+	<!-- TypeScript -->
+
+	<!-- C -->
+
+	<!-- HTML -->
+
+	<!-- CSS -->
+
+	<!-- JavaScript -->
+
+	<!-- JSON -->
+
+	<!-- YAML -->
+
+	<!-- SQL -->
+
+	<!-- Java -->
+
+	<!-- Go -->
+
+	<!-- Makefile -->
+
+	<!-- Bash -->
+
+	<script>hljs.initHighlightingOnLoad();</script>
 
     <!-- BEGIN ghost.org/members.js -->
     <script
