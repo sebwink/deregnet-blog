@@ -62,6 +62,8 @@
     </script>
     <!-- END KaTeX -->
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
     {{ghost_head}}
 
 </head>
@@ -154,6 +156,25 @@
 	<!-- Bash -->
 
 	<script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- cookieconsent -->
+
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+		window.cookieconsent.initialise({
+		    "palette": {
+				"popup": {
+				    "background": "#eb6c44",
+				    "text": "#ffffff"
+				},
+				"button": {
+				    "background": "#f5d948"
+				}
+		    },
+		    "theme": "classic",
+		    "position": "bottom-left"
+		});
+</script>
 
     <!-- BEGIN ghost.org/members.js -->
     <script
