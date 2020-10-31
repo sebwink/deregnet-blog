@@ -4,7 +4,7 @@ This is Editorial, a news-oriented design built around a dynamic 'locking' sideb
 
 This fork of the Ghost [Editorial theme](https://github.com/TryGhost/Editorial) contains modifications needed in order to run this blog:
 
-**Demo: https://blog.sebwink.net**
+**Demo: https://dereg.net**
 
 &nbsp;
 
